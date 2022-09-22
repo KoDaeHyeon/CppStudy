@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cfloat> // 앱실론 사용을 위한 라이브러리
 
 using namespace std;
 
@@ -24,4 +25,42 @@ int main()
 	cout << 0.1 << endl; // 0.1000000000000000055511151231257827021181583404541015625
 	cout << 0.1L << endl;// 0.1000000000000000055511151231257827021181583404541015625
 	//사실상 == 비교를 해야하는 연산에서는 부동 소수점을 쓰지 않는 것이 가장 좋음
+
+
+	cout << endl << endl;
+
+	float anum0 = 1.0f;
+	float anum1 = 0.0f;
+	for (int i = 0; i < 1000000; i++)
+		anum1 = anum1 + 0.0000001;
+
+	if (num0 == num1) //실행안됨
+		cout << "aEqual 0" << endl;
+
+	//앱실론을 이용하여 조건문 수행
+	if (fabsf(num0 - num1) <= FLT_EPSILON)//FLT_EPSILON -> float에 관한 앱실론, 오차율이 앱실론보다 커지면 값이 달라질 수 있으니 주의
+		cout << "aEqual 1" << endl; 
+	
+
+	cout << endl << endl;
+
+	// 1 = 1.0 * 10^0(2)
+	unsigned int bnum0 = 0b00111111100000000000000000000000; // 1
+	float bnum1;
+	memcpy(&bnum1, &bnum0, sizeof(bnum0));
+
+	cout << "bnum1 " << bnum1 << endl; //1출력
+
+	unsigned int bnum2 = 0b00111111100000000000000000000001; //float이 표현할수 있는 1보다 크지만 가장 작은수
+	float bnum3;
+	memcpy(&bnum3, &bnum2, sizeof(bnum2));
+
+	cout << "bnum3 " << bnum3 << endl; // 1.00000011920928955078125
+
+	cout << bnum3 - bnum1 << endl; //float이 표현할 수 있는 1보다 크지만 가장 작은수 - 1 = 앱실론
+	cout << FLT_EPSILON << endl;
+
+
+	cout << endl << endl;
+
 }
