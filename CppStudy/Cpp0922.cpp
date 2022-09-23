@@ -62,5 +62,33 @@ int main()
 
 
 	cout << endl << endl;
+	
+	float cnum0 = 1.0f;
 
+	unsigned int cnum1 = 0b00110011100000000000000000000000; //1.0(2) * 10^-24(2)
+	float cnum2;
+	memcpy(&cnum2, &cnum1, sizeof(cnum1));
+
+	cout << cnum0 + cnum2; //1출력
+	// 0011,1111,1000,0000,0000,0000,0000,0000 = 1.0(2)
+	// 0011,0100,0000,0000,0000,0000,0000,0000 = 1.0(2) * 10^-23(2)
+	// 0011,0011,1000,0000,0000,0000,0000,0000 = 1.0(2) * 10^-24(2)
+
+	//어떤 정밀도를 요구하는 연사는 부동소수점을 쓰지말고, 고정소수점이나 정수형을 써야함
+
+	cout << endl << endl;
+
+	float fltMin = FLT_MIN; //float 최소값 0000,0000,1000,0000,0000,0000,0000,0000 = 10^-126(2)
+	unsigned int ifltMin;
+	memcpy(&ifltMin, &fltMin, sizeof(fltMin));
+
+	float fltTrueMin = FLT_TRUE_MIN;  // 0000,0000,0000,0000,0000,0000,0000,0001 = 10^-126(2) * 10^-23(2) = 10^-149(2)
+	unsigned int ifltTrueMin;
+	memcpy(&ifltTrueMin, &fltTrueMin, sizeof(fltTrueMin));
+
+	cout << ifltMin << endl; // 8388608
+	cout << ifltTrueMin << endl; // 1
+
+	cout << fltMin << endl; // 1.17549e-38
+	cout << fltTrueMin << endl; // 1.4013e-45
 }
