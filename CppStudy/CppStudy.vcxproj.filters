@@ -24,6 +24,9 @@
     <ClCompile Include="Cpp0923.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Cpp0926.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">

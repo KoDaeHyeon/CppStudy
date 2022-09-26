@@ -133,7 +133,10 @@
     <ClCompile Include="Cpp0922.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Cpp0923.cpp" />
+    <ClCompile Include="Cpp0923.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Cpp0926.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
