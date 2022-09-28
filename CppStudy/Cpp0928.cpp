@@ -40,4 +40,17 @@ int main()
 	cout << '\n' << !10 << endl; // 0을 출력 10은 true이기 떄문에 !가 붙으면 false인 0이 출력
 
 	cout << (1 && 2) << endl; // &&와 같은 연산자는 시프트연산자인 <<보다 우선순위가 낮기때문에 괄호를 해줘야함
+
+	cout << '\n' << endl;
+
+	int anum = -10;
+	int abs = num < 0 ? -num : num;
+	//(A) ? (B) : (C); A가 true면 B 실행 false면 C실행
+
+	int anum0 = 0;
+	anum0 == 0 ? (cout << "anum0 == 0 \n") : (cout << "anum0 !=0 \n"); // anum0 == 0 출력
+	cout << (anum0 == 0 ? "anum0 == 0 \n" : "anum != 0 \n");//"anum0 == 0"이출력 여기서 B와 C는 타입이 같아야함 다르면 피연산자 호환이 안됨
+
+	short sNum = std::numeric_limits<int>::max(); //01111111111111111111111111111111 에서 short 2바이트에 넣어서 앞이 짤려서 1111111111111111만 들어감
+	cout << sNum; //-1 출력
 }
