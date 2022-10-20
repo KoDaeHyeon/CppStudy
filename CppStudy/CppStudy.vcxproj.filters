@@ -39,6 +39,9 @@
     <ClCompile Include="SBS2WEEK.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="SBS3WEEK.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">

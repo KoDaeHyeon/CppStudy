@@ -148,7 +148,10 @@
     <ClCompile Include="SBS1WEEK.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="SBS2WEEK.cpp" />
+    <ClCompile Include="SBS2WEEK.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SBS3WEEK.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
