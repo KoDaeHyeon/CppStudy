@@ -7,7 +7,7 @@ Shape::Shape(const float x, const float y){
 
 Shape::~Shape()
 {
-	cout << "Shape »èÁ¦" << endl;
+	cout << "Shape Å¥ÄÃÅš" << endl;
 };
 
 float Rectangle::GetArea() const
@@ -17,7 +17,7 @@ float Rectangle::GetArea() const
 
 Rectangle::~Rectangle()
 {
-	cout << "Rectangle »èÁ¦" << endl;
+	cout << "Rectangle ì‚­ì œ" << endl;
 }
 
 float Triangle::GetArea() const
@@ -27,5 +27,5 @@ float Triangle::GetArea() const
 
 Triangle::~Triangle()
 {
-	cout << "Triangle »èÁ¦" << endl;
+	cout << "Triangle ì‚­ì œ" << endl;
 }
